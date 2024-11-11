@@ -9,14 +9,28 @@
 <body>
     <!-- INSERISCO BOTTONE MOMENTANIO PER PROVARE LA FUNZIONALITà -->
     <div>
-        <div class="raw">
-            <div class="col">
-               <div id="lista-Numeri"> </div>
-                 <div id="contatore-tempo"></div>
+        <div  class="raw" >
+            <div id="col-start"  class="col" style="display: block;">
+               <div id="lista-Numeri">* * * * * Numeri Nascosti</div>
+                 <div id="contatore-tempo">30s</div>
             </div>
+            <button id="start-btn">inizia gioco</button>
+           
         </div>
-    <button id="start-btn">inizia gioco</button>
+    
 </div>
+<!-- ZONA INSERIMETO NUMERI DA UTENTE --> 
+ <form action="">
+ <div id="col-number" style="display: inline-block;"> <!-- mettere display none --> 
+    <h3>Inserisci i numeri visualizzati senza sbagliare!</h3>
+    <input id="primo-num" type="number">
+    <input id="secondo-num" type="number">
+    <input id="terzo-num" type="number">
+    <input id="quarto-num" type="number">
+    <input id="quinto-num" type="number">
+    <button id="invio-dati" type="submit">Conferma</button>
+ </div>
+</form>
 
     <script src="./js/script.js"></script>
 </body>
