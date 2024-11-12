@@ -60,16 +60,21 @@ invioDati.addEventListener("click", function(event) {
     arrayNumeriUtente.push(numeroUno,numeroDue,numeroTre,numeroQuattro,numeroCinque);
     event.preventDefault();
 
+    const comuni = [];
+for (let i = 0; i < arrayNumeriCasuali.length; i++) {
+  if (arrayNumeriCasuali.includes(arrayNumeriUtente[i])) {
+    comuni.push(arrayNumeriUtente[i]);
+  }
+}
+    
+    console.log(comuni);
 
 });    
 
-// confronto tra numeri utente e numeri random con ciclo for
-let numeriCorretti = 0;
-    for (let i = 0; i < 5; i++) {
-        if (arrayNumeri.includes(arrayNumeriUtente[i])) {
-            numeriCorretti++;
-        }
-    }
+// confronto tra numeri utente e numeri random con ciclo for creando un array con i numeri corretti
+
+
+
 
 
 
