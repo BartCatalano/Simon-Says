@@ -11,7 +11,8 @@ const terzoNumero = document.getElementById("terzo-num");
 const quartoNumero = document.getElementById("quarto-num");
 const quintoNumero = document.getElementById("quinto-num");
 const invioDati = document.getElementById("invio-dati");
-
+// colonna numeri indovinati
+const numeriIndovinati = document.getElementById("numeri-indovinati");
 
 // GENERAZIONE NUMERI RANDOM
 // creo un array per inserire i numeri
@@ -59,7 +60,7 @@ invioDati.addEventListener("click", function(event) {
     const numeroCinque = parseInt(quintoNumero.value); 
     arrayNumeriUtente.push(numeroUno,numeroDue,numeroTre,numeroQuattro,numeroCinque);
     event.preventDefault();
-
+// confronto tra numeri utente e numeri random con ciclo for creando un array con i numeri corretti
     const comuni = [];
 for (let i = 0; i < arrayNumeriCasuali.length; i++) {
   if (arrayNumeriCasuali.includes(arrayNumeriUtente[i])) {
@@ -68,10 +69,10 @@ for (let i = 0; i < arrayNumeriCasuali.length; i++) {
 }
     
     console.log(comuni);
-
+    numeriIndovinati.innerHTML = (`i numeri indovinati sono ${comuni}`);
 });    
 
-// confronto tra numeri utente e numeri random con ciclo for creando un array con i numeri corretti
+
 
 
 
